@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Заголовок страницы</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="img/favicon.ico" rel="shortcut icon" />
+		<link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/all.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/animate.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/jquery.mCustomScrollbar.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/fancybox.css" />
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/style.css.map" media="screen" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="pre-loader" class="pre-loader" style="opacity: 0; display: none"></div>
+		<div class="fader"></div>
+		<header class="header">
+			<div class="header__inner container">
+				<div class="header__logo-wrapper col-lg-2 col-md-4 col-5">
+					<img class="header__logo" src="" alt="Oxygen Empire">
+				</div>
+				<div class="header__menu">
+					<button class="hamburger-close" id="hamburger-close">
+						✖
+					</button>
+					<ul>
+						<li><a class="nav-link active" href="#">О компании</a></li>
+						<li><a class="nav-link" href="#">Руководство</a></li>
+						<li><a class="nav-link" href="#">Практики</a></li>
+						<li><a class="nav-link" href="#">Отрасли</a></li>
+						<li><a class="nav-link" href="#">Партнеры</a></li>
+						<li><a class="nav-link" href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="header_contacts">
+					<ul>
+						<li><a href="#">+999 99 999 9999</a></li>
+						<li><a href="#">info@oxygenempire</a></li>
+					</ul>
+				</div>
+				<button class="hamburger" id="hamburger">
+					☰
+				</button>
+			</div>
+		</header>
+		<main>
+			<section class="hero-intro">
+				<div class="hero-video_container">
+					<video poster="" playsinline autoplay muted loop>
+						<source src="./img/drone-dubai.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="hero-intro-text container">
+					<div class="hero-text_container">
+						<h1 class="hero_title">Oxygen Empire</h1>
+						<div>
+							<p class="hero_subtitle">Высокопрофессиональная поддержка бизнеса и частных клиентов в ОАЭ и странах Ближнего Востока</br>
+							</p>
+							<p>
+								Highly professional support for businesses and private clients in the UAE and the Middle East
+							</p>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<section class="about-container">
+				<div class="about container">
+					<h2>О компании/About</h2>
+					<div class="about__info">
+						<div class="about__info-item">
+							<div class="number">
+								<h3>
+									>50 
+								</h3>
+								<h4>
+									экспертов
+								</h4>
+							</div>
+							<p>
+								Oxygen Empire входит в группу компаний, объединяющую более 50 экспертов, квалифицированных в международном праве, выпускников престижных международных университетов
+							</p>
+						</div>
+						<div class="about__info-item">
+							<div class="number">
+								<h3>
+									5
+								</h3>
+								<h4>
+									направлений
+								</h4>
+							</div>
+							<ul>
+								<li>Корпоративное право и M&A
+								</li>
+								<li>Интеллектуальная собственность и услуги для технологических компаний 
+								</li>
+								<li>Корпоративное и административное сопровождение бизнеса
+								</li>
+								<li>Услуги состоятельным частным клиентам в ОАЭ
+								</li>
+								<li>Налоговое консультирование
+								</li>
+							</ul>
+						</div>
+						<div class="about__info-item">
+							<div class="number">
+								<h3>
+									20
+								</h3>
+								<h4>
+									стран
+								</h4>
+							</div>
+							<p>
+								Мы оказываем высокопрофессиональную правовую, корпоративную и административную поддержку бизнеса и частных клиентов в ОАЭ и странах Ближнего Востока
+							</p>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+		</main>
+		<div class="footer-wrapper">
+			<div class="footer">
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="js/fancybox.umd.js"></script>
+		<script type="text/javascript" src="js/front.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const hamburger = document.getElementById('hamburger');
+				const hamburgerClose = document.getElementById('hamburger-close');
+				const menu = document.querySelector('.header__menu');
+		
+				// Функция для снятия класса active, если ширина экрана больше 1400 пикселей
+				function handleResize() {
+					if (window.innerWidth > 1400) {
+						menu.classList.remove('active');
+					}
+				}
+		
+				hamburger.addEventListener('click', function() {
+					menu.classList.add('active');
+				});
+		
+				hamburgerClose.addEventListener('click', function() {
+					menu.classList.remove('active');
+				});
+		
+				// Добавление слушателя события resize
+				window.addEventListener('resize', handleResize);
+		
+				// Вызов функции сразу при загрузке страницы, чтобы снять класс, если это необходимо
+				handleResize();
+			});
+		</script>
+		<script>
+			// Фиксированная шапка
+			$(function() {
+				let header = $('.header');
+				let hederHeight = header.height(); // вычисляем высоту шапки
+				
+				$(window).scroll(function() {
+				if($(this).scrollTop() > 200) {
+					header.addClass('header_fixed');
+
+				} else {
+					header.removeClass('header_fixed');
+
+				}
+				});
+			});
+		</script>
+		<script>
+			//смена лого в шапке
+			document.addEventListener('DOMContentLoaded', function() {
+				const header = document.querySelector('.header');
+				const logo = document.querySelector('.header__logo');
+
+				function updateLogo() {
+					if (header.classList.contains('header_fixed')) {
+						logo.src = './img/Oxygen-logo-demo-black.png';
+					} else {
+						logo.src = './img/Oxygen-logo-demo-white.png';
+					}
+				}
+
+				// Вызов при загрузке
+				updateLogo();
+
+				// Вызов при добавлении/удалении класса
+				window.addEventListener('scroll', function() {
+					updateLogo();
+				});
+			});
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const navlinks = document.querySelectorAll('.nav-link');
+				navlinks.forEach(function(navlink) {
+					navlink.addEventListener('click', function() {
+						navlinks.forEach(function(link) {
+							link.classList.remove('active'); // Убираем 'active' у всех ссылок
+						});
+						navlink.classList.add('active'); // Добавляем 'active' к текущей
+					});
+				});
+			});
+			</script>
+	</body>
+</html>
