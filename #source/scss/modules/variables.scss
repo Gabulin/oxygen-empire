@@ -10,6 +10,7 @@
 
 
 :root {
+    /*
 	--white: #fefefe;
     --black: #000;
     --dark-gray: #949494;
@@ -17,10 +18,27 @@
     --light-blue: #7395ae;
     --blue: #2779a7;
     --dark-blue:#24455c;
+*/
+    --white: #fefefe;
+    --light-gray:#F5F4F6;
+    --gray:#d0d3d4;
+    --dark-gray:#5b6770;
+    --black: #25282a;
+    --light-blue: #5bc2e7;
+    --blue:#00a3e0;
+    --dark-blue:#003b49;
+    /*
+    --dark-blue:#24455c;
+    */
 }
 
 :root {
+    /*
     --font-main: "Jost", sans-serif;
     --font-sub: "Raleway", sans-serif;
     --font-var: "Rubik", sans-serif;
+    */
+    --font-main: "Fira Sans", Arial;
+    --font-sub: "Fira Sans", Arial;
+    --font-var: "Fira Sans", Arial;
 }

@@ -1,0 +1,41 @@
+.practices-container {
+    background-color: var(--light-gray);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.practices {
+    h2 {
+        font-size: 3.5rem;
+        font-family: var(--font-main);
+        color: var(--dark-blue);
+        text-align: center;
+        margin-bottom: 2.5rem;
+        font-weight: 500;
+        @media (max-width: 1400px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 2.75rem;
+        }
+        @media (max-width: 550px) {
+          font-size: 2.5rem;
+        }
+      }
+      &_item {
+        .name {
+            
+            a {
+                width: 100%;
+                padding-right: 6rem;
+                color: var(--black);
+                border-bottom: 2px solid var(--dark-blue);
+            }
+            &:hover {
+                a {
+                    color: var(--white);
+                }
+            }
+        }
+      }
+}
