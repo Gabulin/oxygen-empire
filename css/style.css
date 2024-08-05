@@ -2065,7 +2065,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 0.5rem;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 .partners_grid-item {
   background-color: #b0e0e6;
@@ -2081,7 +2081,7 @@ a {
 @media (max-width: 1600px) {
   .partners_grid {
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 2rem;
+    row-gap: 1.5rem;
   }
 }
 @media (max-width: 991px) {
@@ -2108,7 +2108,7 @@ a {
   .partners_grid .item-17 {
     grid-column: span 3;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 2rem;
+    row-gap: 1.5rem;
   }
 }
 @media (max-width: 991px) {
@@ -2135,6 +2135,17 @@ a {
   border: 1px solid #ccc;
   padding: 20px;
   text-align: center;
+}
+
+.marquee-container {
+  background: var(--light-gray);
+  padding-bottom: 2rem;
+}
+
+.marquee-container img {
+  margin-right: 0.5rem;
+  display: inline-block;
+  filter: grayscale(100%);
 }
 
 .contacts-section {

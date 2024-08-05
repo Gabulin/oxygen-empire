@@ -1,0 +1,10 @@
+.marquee-container {
+    background: var(--light-gray);
+    padding-bottom: 2rem;
+}
+
+.marquee-container img {
+    margin-right: 0.5rem;
+    display: inline-block;
+    filter: grayscale(100%);
+}

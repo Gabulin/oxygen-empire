@@ -1669,6 +1669,27 @@
           </div>
         </div>
       </section>
+      <section class="marquee-container container">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            <img class="img-fluid" src="img/dubaifinance.png" alt="Dubai Finance" />
+            <img class="img-fluid" src="img/dubaiislamicbank.png" alt="Dubai Islamic Bank" />
+            <img class="img-fluid" src="img/emirates islamic.png" alt="Emirates Islamic" />
+            <img class="img-fluid" src="img/adgm.png" alt="ADGM" />
+            <img class="img-fluid" src="img/sharjahislamicbank.png" alt="Sharjah Islamic Bank" />
+            <img class="img-fluid" src="img/nbd.png" alt="NBD" />
+            <img class="img-fluid" src="img/ifza.png" alt="IFZA" />
+            <img class="img-fluid" src="img/jafza.png" alt="JAFZA" />
+            <img class="img-fluid" src="img/ajmanbank.png" alt="Ajman Bank" />
+            <img class="img-fluid" src="img/banque.png" alt="Banque" />
+            <img class="img-fluid" src="img/dubaiairport.png" alt="Dubai Airport" />
+            <img class="img-fluid" src="img/dubaiinternetcity.png" alt="Dubai Internet City" />
+            <img class="img-fluid" src="img/fab.png" alt="FAB" />
+            <img class="img-fluid" src="img/dmcc.png" alt="DMCC" />
+            <img class="img-fluid" src="img/rakez.png" alt="RAKEZ" />
+            <img class="img-fluid" src="img/ulmo.png" alt="ULMO" />
+            <img class="img-fluid" src="img/adcb.png" alt="ADCB" />
+        </marquee>
+    </section>
       <section class="contacts-section" id="contacts">
         <div class="contacts container">
           <div class="contacts_info">
@@ -1940,6 +1961,13 @@
         // Вставим отсортированные элементы обратно в контейнер
         contentTexts.forEach(contentText => item.appendChild(contentText));
     });
+});
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const marqueeLine = document.querySelector(".marquee-line");
+    const clone = marqueeLine.cloneNode(true);
+    marqueeLine.appendChild(clone);
 });
     </script>
   </body>
