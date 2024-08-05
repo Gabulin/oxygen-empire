@@ -710,6 +710,7 @@ template {
   --gray:#d0d3d4;
   --dark-gray:#5b6770;
   --black: #25282a;
+  --shadow-black:#3A3A3A;
   --light-blue: #9CCEF3;
   --blue:#009EE0;
   --dark-blue:#003b49;
@@ -1157,6 +1158,7 @@ a {
 .header .header__inner .header__menu ul li a,
 .header .header__inner .header_contacts ul li a {
   color: var(--white);
+  transition: opacity 0.3s ease;
 }
 .header .header__inner .header__menu ul li a:hover,
 .header .header__inner .header_contacts ul li a:hover {
@@ -1370,8 +1372,8 @@ a {
   width: 30%;
 }
 .about .about__info .about__info-item h3 {
-  color: var(--dark-blue);
-  font-size: 10rem;
+  color: var(--shadow-black);
+  font-size: 4rem;
   font-family: var(--font-var);
   text-align: left;
   margin: 0;
@@ -1379,23 +1381,23 @@ a {
 }
 @media (max-width: 1400px) {
   .about .about__info .about__info-item h3 {
-    font-size: 8rem;
+    font-size: 3rem;
     text-align: right;
   }
 }
 @media (max-width: 768px) {
   .about .about__info .about__info-item h3 {
-    font-size: 6rem;
+    font-size: 2.75rem;
   }
 }
 @media (max-width: 550px) {
   .about .about__info .about__info-item h3 {
     text-align: left;
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 .about .about__info .about__info-item h4 {
-  color: var(--dark-blue);
+  color: var(--shadow-black);
   font-size: 2rem;
   font-family: var(--font-var);
   text-align: left;
@@ -1422,7 +1424,7 @@ a {
 .about .about__info .about__info-item P, .about .about__info .about__info-item ul li {
   font-family: var(--font-sub);
   text-align: left;
-  color: var(--dark-blue);
+  color: var(--shadow-black);
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -1736,29 +1738,31 @@ a {
   display: flex;
   flex-direction: row;
   gap: 4rem;
+  height: fit-content;
 }
 .practices_name {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: auto;
+  height: 100%;
 }
 .practices_name-item {
   transition: all 0.3s ease;
   cursor: pointer;
 }
 .practices_name-item .blue-sqr {
+  height: 150px;
   transition: all 0.3s ease;
   background-color: var(--light-blue);
 }
 .practices_name-item .blue-sqr h3 {
   color: var(--light-gray);
-  font-size: 1, 5rem;
+  font-size: 1.35rem;
   font-family: var(--font-main);
   text-align: left;
   font-weight: 400;
   margin: 0;
-  padding: 1rem;
-  padding-right: 5rem;
+  padding: 1.25rem;
 }
 @media (max-width: 1400px) {
   .practices_name-item .blue-sqr h3 {
@@ -1783,22 +1787,22 @@ a {
   margin-bottom: 1.5rem;
 }
 .practices_content-item {
-  flex-wrap: wrap;
-  gap: 2rem;
-  max-height: 0;
-  overflow: hidden;
   display: flex;
-  transition: max-height 0.5s ease, padding 0.5s ease-out;
-  padding: 0;
+  flex-wrap: wrap;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-out, transform 0.5s ease-out;
+  transform-origin: top;
+  transform: scaleY(0);
 }
 .practices_content-item.active {
-  max-height: 100%;
-  padding: 15px 0;
+  height: auto;
+  transform: scaleY(1);
 }
 .practices_content-item .content-text {
   display: flex;
   position: relative;
-  flex-basis: 30%;
+  flex-basis: 50%;
 }
 @media (max-width: 1800px) {
   .practices_content-item .content-text {
@@ -1806,8 +1810,10 @@ a {
   }
 }
 .practices_content-item .content-text svg {
+  justify-self: left;
   margin-top: 5px;
   flex-basis: 15%;
+  width: fit-content;
 }
 .practices_content-item .content-text P,
 .practices_content-item .content-text ul li {
@@ -1841,24 +1847,32 @@ a {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 6rem;
-}
-.industries-container .fader {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 2;
-}
-.industries-container img {
-  top: 0;
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  height: 100%;
-  object-position: right top;
+  background-image: url(../../../img/industries_bg.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  /* 
+  .fader {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 2;
+  }
+  img {
+      top: 0;
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
+      height: 100%;
+      object-position: right top;
+  }
+  */
 }
 
 .industries h2 {

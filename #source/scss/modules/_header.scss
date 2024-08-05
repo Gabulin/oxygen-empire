@@ -1,3 +1,4 @@
+
 .header {
   width: 100%;
   background: transparent;
@@ -30,6 +31,7 @@
 
         li a {
           color: var(--white);
+          transition: opacity 0.3s ease;
           &:hover {
             opacity: 0.7;
           }
@@ -55,26 +57,23 @@
           }
           &:hover {
             opacity: 0.7;
-            
-        }
+          }
 
-        &.active {
-            position: relative; 
-            text-decoration: none; 
-            transition: 0.3s; 
+          &.active {
+            position: relative;
+            text-decoration: none;
+            transition: 0.3s;
             &::after {
-                content: ''; 
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%; 
-                height: 2px;
-                background-color: var(--white); 
-                transition: 0.5s ease;
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 2px;
+              background-color: var(--white);
+              transition: 0.5s ease;
             }
-            
-        }
-        
+          }
         }
       }
       &.active {
@@ -86,24 +85,23 @@
             font-size: 1.5rem;
             max-width: fit-content;
             &::after {
-                content: "";
-                width: 0;
-              }
+              content: "";
+              width: 0;
+            }
             &.active {
-                position: relative; 
-                text-decoration: none; 
-                transition: 0.3s; 
-                &::after {
-                    content: ''; 
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 100%; 
-                    height: 2px;
-                    background-color: var(--blue); 
-                    transition: 0.5s ease;
-                }
-                
+              position: relative;
+              text-decoration: none;
+              transition: 0.3s;
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: var(--blue);
+                transition: 0.5s ease;
+              }
             }
           }
         }
@@ -191,26 +189,26 @@
             font-weight: 400;
             transition: 0.3s ease;
             &:hover {
-                opacity: 1;
-                color: var(--blue);
+              opacity: 1;
+              color: var(--blue);
             }
             &::after {
-                content: ''; 
-                width: 0; 
-                height: 2px;
-                transition: 0.5s ease;
+              content: "";
+              width: 0;
+              height: 2px;
+              transition: 0.5s ease;
             }
             &.active {
-                &::after {
-                    content: ''; 
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 100%; 
-                    height: 2px;
-                    background-color: var(--blue); 
-                    transition: 0.5s ease;
-                }
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: var(--blue);
+                transition: 0.5s ease;
+              }
             }
           }
         }
