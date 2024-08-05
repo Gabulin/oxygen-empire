@@ -1930,6 +1930,7 @@ a {
   background-position: top right;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   padding-top: 2rem;
   padding-bottom: 6rem;
   /* 
