@@ -2,6 +2,9 @@
   background-color: var(--light-gray);
   padding-top: 2rem;
   padding-bottom: 4rem;
+  @media (max-width:1400px) {
+    padding-bottom: 2rem;
+}
   .title {
     width: 100%;
     display: flex;
@@ -31,18 +34,22 @@
   flex-direction: row;
   gap: 4rem;
   height: fit-content;
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
   &_name {
     display: flex;
     flex-direction: column;
-    gap: auto;
+    gap: 1rem;
     height: 100%;
     &-item {
       transition: all 0.3s ease;
       cursor: pointer;
       .blue-sqr {
-        height: 150px;
         transition: all 0.3s ease;
-        background-color: var(--light-blue);
+        background-color: #003a49ab;
         h3 {
           color: var(--light-gray);
           font-size: 1.35rem;
@@ -51,7 +58,7 @@
           font-weight: 400;
           margin: 0;
           padding: 1.25rem;
-          
+
           @media (max-width: 1400px) {
             font-size: 1.25rem;
           }
@@ -65,15 +72,18 @@
       }
       &.active {
         .blue-sqr {
-          background-color: var(--blue);
+          background-color: var(--dark-blue);
         }
       }
     }
   }
   &_content {
     h3 {
-      color: var(--blue);
+      color: var(--dark-blue);
       margin-bottom: 1.5rem;
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
     &-item {
       display: flex;
@@ -84,8 +94,12 @@
       transform-origin: top;
       transform: scaleY(0);
       &.active {
-        height: auto;
+        height: 100%;
         transform: scaleY(1);
+        @media (max-width:991px) {
+          margin-top: 2rem;
+        margin-bottom: 2rem;
+        }
       }
       .content-text {
         display: flex;
@@ -93,6 +107,9 @@
         flex-basis: 50%;
         @media (max-width: 1800px) {
           flex-basis: 45%;
+        }
+        @media (max-width: 550px) {
+          flex-basis: 90%;
         }
         svg {
           justify-self: left;
@@ -118,6 +135,11 @@
             font-size: 1rem;
           }
         }
+      }
+      @media (max-width: 991px) {
+        
+        width: 100%;
+        justify-content: space-between;
       }
     }
   }
