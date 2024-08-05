@@ -39,11 +39,13 @@
                 font-weight: 400;
                 @media (max-width:1400px) {
                     font-size: 8rem;
+                    text-align: right;
                 }
                 @media (max-width:768px) {
                     font-size: 6rem;
                 }
                 @media (max-width:550px) {
+                    text-align: left;
                     font-size: 4rem;
                 }
             }
@@ -56,11 +58,13 @@
                 font-weight: 500;
                 @media (max-width:1400px) {
                     font-size: 1.75rem;
+                    text-align: right;
                 }
                 @media (max-width:768px) {
                     font-size: 1.5rem;
                 }
                 @media (max-width:550px) {
+                    text-align: left;
                     font-size: 1.25rem;
                 }
             }
@@ -93,6 +97,7 @@
                 gap: 20px;
                 .number {
                     width: 40%;
+                    border-right: 3px solid var(--dark-blue);
                 }
                 p, ul {
                     width: 60%;
@@ -116,6 +121,7 @@
                 gap: 0px;
                 .number {
                     width: 100%;
+                    border-right: none;
                 }
                 p,ul {
                     width: 100%;
